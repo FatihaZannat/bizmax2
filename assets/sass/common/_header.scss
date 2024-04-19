@@ -43,42 +43,83 @@
 
 .cs_nav {
     height: 100%;
-.cs_nav_list{
-    height: inherit;
-    >li{
+
+    .cs_nav_list {
         height: inherit;
-        margin-left: 35px;
-        >a{
-            display: inline-flex;
+
+        >li {
             height: inherit;
-            align-items: center;
-          
-        }
-    }
-    .menu-item-has-children{
-        >a{
-           
-            &::after{
-                content: '\2b';
-                margin-left: 2px;
-                font-weight: bold;
+            margin-left: 35px;
+
+            >a {
+                display: inline-flex;
+                height: inherit;
+                align-items: center;
+
             }
         }
-        ul{
-            display: none;
-            position: absolute;
-            
+
+        .menu-item-has-children {
+            >a {
+
+                &::after {
+                    content: '\2b';
+                    margin-left: 2px;
+                    font-weight: bold;
+                }
+            }
+
+            ul {
+                display: none;
+                position: absolute;
+
+            }
         }
+
     }
 
 }
 
-}
-.cs_header_search_btn{
+.cs_header_search_btn {
     transition: all 0.4s ease;
     cursor: pointer;
-    color:$white_color;
-    &:hover{
+    color: $white_color;
+
+    &:hover {
         color: $accent_color;
+    }
+}
+
+.cs_header_search_wrap {
+    position: relative;
+
+    >.cs_header_search_form {
+        position: absolute;
+        box-shadow: 0px 4px 4px rgba(193, 193, 193, 0.25);
+        width: 350px;
+        top: 50px;
+        right: -30px;
+
+        input {
+            height: 60px;
+            width: 310px;
+            border-radius: 5px;
+            padding-left: 10px;
+            outline: none;
+            background: #F3F3F3;
+            border: 1px solid rgba(62, 62, 62, 0.2);
+            &:focus{
+                border-color: rgba(62, 62, 62, 0.4);
+            }
+        }
+
+        .cs_header_search_submit_btn {
+            position: absolute;
+            border: none;
+            color: $border_color;
+            top: 50%;
+            right: 50px;
+            transform: translateY(-50%);
+        }
     }
 }

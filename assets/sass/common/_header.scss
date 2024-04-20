@@ -46,6 +46,7 @@
 
     .cs_nav_list {
         height: inherit;
+        position: relative;
 
         >li {
             height: inherit;
@@ -57,24 +58,52 @@
                 align-items: center;
 
             }
-        }
 
-        .menu-item-has-children {
-            >a {
+            >ul {
+               
+            }
 
-                &::after {
+            &:hover {}
+
+            &.menu-item-has-children {
+              > a{
+                position: relative;
+                &::after{
                     content: '\2b';
-                    margin-left: 2px;
-                    font-weight: bold;
+                    margin-left: 6px;
+                  font-weight: bold;
+                 
                 }
+              }
             }
 
             ul {
-                display: none;
                 position: absolute;
-
+                background-color: #18191d;
+                top: calc(100% - 15px);
+                left: 0px;
             }
         }
+
+        // .menu-item-has-children {
+        //     >a {
+
+        //         &::after {
+        //             content: '\2b';
+        //             margin-left: 2px;
+        //             font-weight: bold;
+        //         }
+        //     }
+
+        //     ul {
+        //         // display: none;
+        //         position: absolute;
+        //         background: $border_color;
+        //         left: 0px;
+        //         // top: calc(100% + 15px);
+        //         top: 0px;
+        //     }
+        // }
 
     }
 
@@ -91,14 +120,16 @@
 }
 
 .cs_header_search_wrap {
-    position: relative;
+    position: absolute;
 
     >.cs_header_search_form {
         position: absolute;
         box-shadow: 0px 4px 4px rgba(193, 193, 193, 0.25);
         width: 350px;
         top: 50px;
-        right: -30px;
+        right: 0px;
+        visibility: hidden;
+        opacity: 0;
 
         input {
             height: 60px;
@@ -108,7 +139,8 @@
             outline: none;
             background: #F3F3F3;
             border: 1px solid rgba(62, 62, 62, 0.2);
-            &:focus{
+
+            &:focus {
                 border-color: rgba(62, 62, 62, 0.4);
             }
         }
@@ -121,5 +153,12 @@
             right: 50px;
             transform: translateY(-50%);
         }
+    }
+}
+
+.cs_header_search_wrap.active {
+    .cs_header_search_form {
+        visibility: visible;
+        opacity: 1;
     }
 }

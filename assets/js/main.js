@@ -22,7 +22,7 @@ $(window).on('load', function () {
 })
 
 $(function(){
-
+mainNav()
 })
 
 
@@ -36,7 +36,16 @@ function preloader(){
     // console.log('hello');
 }
 
+/*--------------------------------------------------
+2. menu
+----------------------------------------------------*/
+function mainNav(){
 
+    // search toggle
+    $('.cs_header_search_btn').on('click', function(){
+        $(this).parents('.cs_header_search_wrap').toggleClass('active')
+    })
+}
 
 
 })(jQuery)

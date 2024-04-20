@@ -50,12 +50,13 @@
 
         >li {
             height: inherit;
-            margin-left: 35px;
+            margin-left: 50px;
 
             >a {
                 display: inline-flex;
                 height: inherit;
                 align-items: center;
+                position: relative;
 
             }
 
@@ -63,9 +64,15 @@
                
             }
 
-            &:hover {}
+            &:hover {
+               >ul{
+                visibility: visible;
+                opacity: 1;
+               }
+            }
 
             &.menu-item-has-children {
+                position: relative;
               > a{
                 position: relative;
                 &::after{
@@ -78,32 +85,33 @@
             }
 
             ul {
+                // display: none;
                 position: absolute;
                 background-color: #18191d;
                 top: calc(100% - 15px);
                 left: 0px;
+                width: 180px;
+                padding: 10px 0;
+                z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        // display: block !important;
+        border-radius: 0px 0px 5px 5px;
+        // transition: all 0.1s ease;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        text-transform: capitalize;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.6em;
+            }
+            li{
+               
             }
         }
 
-        // .menu-item-has-children {
-        //     >a {
+      
 
-        //         &::after {
-        //             content: '\2b';
-        //             margin-left: 2px;
-        //             font-weight: bold;
-        //         }
-        //     }
-
-        //     ul {
-        //         // display: none;
-        //         position: absolute;
-        //         background: $border_color;
-        //         left: 0px;
-        //         // top: calc(100% + 15px);
-        //         top: 0px;
-        //     }
-        // }
+      
 
     }
 
@@ -120,12 +128,12 @@
 }
 
 .cs_header_search_wrap {
-    position: absolute;
+    position: relative;
 
     >.cs_header_search_form {
         position: absolute;
         box-shadow: 0px 4px 4px rgba(193, 193, 193, 0.25);
-        width: 350px;
+        // width: 350px;
         top: 50px;
         right: 0px;
         visibility: hidden;

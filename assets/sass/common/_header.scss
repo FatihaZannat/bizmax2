@@ -5,6 +5,10 @@
 }
 
 .cs_site_header {}
+.cs_sticky_header{
+    position: fixed;
+    width: 100%;
+}
 
 .cs_top_header {
     background-color: #18191D;
@@ -61,27 +65,32 @@
             }
 
             >ul {
-               
+              a{
+                display: block;
+                padding: 10px 0;
+              }
             }
 
             &:hover {
-               >ul{
-                visibility: visible;
-                opacity: 1;
-               }
+                >ul {
+                    visibility: visible;
+                    opacity: 1;
+                }
             }
 
             &.menu-item-has-children {
                 position: relative;
-              > a{
-                position: relative;
-                &::after{
-                    content: '\2b';
-                    margin-left: 6px;
-                  font-weight: bold;
-                 
+
+                >a {
+                    position: relative;
+
+                    &::after {
+                        content: '\2b';
+                        margin-left: 6px;
+                        font-weight: bold;
+
+                    }
                 }
-              }
             }
 
             ul {
@@ -93,25 +102,43 @@
                 width: 180px;
                 padding: 10px 0;
                 z-index: 100;
-        opacity: 0;
-        visibility: hidden;
-        // display: block !important;
-        border-radius: 0px 0px 5px 5px;
-        // transition: all 0.1s ease;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        text-transform: capitalize;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 1.6em;
+                opacity: 0;
+                visibility: hidden;
+                // display: block !important;
+                border-radius: 0px 0px 5px 5px;
+                transition: all 0.1s ease;
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                text-transform: capitalize;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 1.6em;
             }
-            li{
-               
+
+            li {
+                &:not(:last-child) {
+                    > a{
+                        position: relative;
+                      
+                    
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0px;
+                        position: absolute;
+                        height: 1px;
+                        width: calc(100% - 40px);
+                        left: 0px;
+                        background-color: rgba(255, 255, 255, 0.1);
+                        
+                    }
+                }
+                }
             }
         }
 
-      
 
-      
+
+
 
     }
 

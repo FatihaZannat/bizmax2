@@ -23,6 +23,7 @@ $(window).on('load', function () {
 
 $(function(){
 mainNav()
+stickyHeader()
 })
 
 
@@ -46,6 +47,40 @@ function mainNav(){
         $(this).parents('.cs_header_search_wrap').toggleClass('active')
     })
 }
+/*--------------------------------------------------
+2. sticky header
+----------------------------------------------------*/
+function stickyHeader () {
+    let $window = $(window)
+    let lastScrollTop = 0
+    let $header = $('.cs_sticky_header') 
+    let $headerHeight = $header.outerHeight() + 30;
+    
+    $window.scroll(function () {
+        console.log('hello');
+        console.log($headerHeight);
+        let windowTop = $window.scrollTop();
+        console.log('scroll top',windowTop);
 
+        if(windowTop >= $headerHeight){
+            $header.addClass('cs_gescout_header')
+        }else{
+            $header.removeClass('cs_gescout_header')
+            $header.removeClass('cs_gescout_show')
+        }
+        
+        if ($header.hasClass('cs_gescout_header')) {
+            console.log('lastScrollTop' + lastScrollTop);
+            if (windowTop < lastScrollTop) {
+              $header.addClass('cs_gescout_show');
+            } else {
+              $header.removeClass('cs_gescout_show');
+            }
+          }
+       
+
+        lastScrollTop = windowTop
+    })
+}
 
 })(jQuery)

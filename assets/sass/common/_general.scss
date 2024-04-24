@@ -1,0 +1,34 @@
+.cs_btn.cs_style_1 {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6em;
+    color: $white_color;
+    background-color: $accent_color;
+    outline: none;
+    border: none;
+
+    span {
+        position: relative;
+        z-index: 1;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.25);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    &:hover{
+        &::after{
+            opacity: 1;
+        }
+    }
+    
+}

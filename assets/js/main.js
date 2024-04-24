@@ -24,6 +24,7 @@ $(window).on('load', function () {
 $(function(){
 mainNav()
 stickyHeader()
+dynamicBackground()
 })
 
 
@@ -57,10 +58,11 @@ function stickyHeader () {
     let $headerHeight = $header.outerHeight() + 30;
     
     $window.scroll(function () {
-        console.log('hello');
-        console.log($headerHeight);
+        console.log('headerHeight '+ $headerHeight);
+        console.log('before' + lastScrollTop);
         let windowTop = $window.scrollTop();
-        console.log('scroll top',windowTop);
+        console.log(' windoTop',windowTop);
+        // console.log("after" + lastScrollTop);
 
         if(windowTop >= $headerHeight){
             $header.addClass('cs_gescout_header')
@@ -72,6 +74,7 @@ function stickyHeader () {
         if ($header.hasClass('cs_gescout_header')) {
             console.log('lastScrollTop' + lastScrollTop);
             if (windowTop < lastScrollTop) {
+                console.log('lastScrollTop' + lastScrollTop);
               $header.addClass('cs_gescout_show');
             } else {
               $header.removeClass('cs_gescout_show');
@@ -80,6 +83,20 @@ function stickyHeader () {
        
 
         lastScrollTop = windowTop
+    })
+
+}
+
+/*--------------------------------------------------
+2. dynamic Background
+----------------------------------------------------*/
+function dynamicBackground () {
+    $('[data-src]').each(function(){
+        let src = $(this).attr('data-src')
+        console.log(src);
+        $(this).css({
+            'background-image': `url('${src}')`
+        })
     })
 }
 

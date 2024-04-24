@@ -1,0 +1,33 @@
+.cs_hero {
+
+    .cs_entity_img {
+        display: none;
+    }
+}
+.cs_hero_btn{
+    background: $accent_color;
+    display: inline-flex;
+    flex-wrap: wrap;
+    // border-radius: 5px;
+
+    cs_btn{
+    }
+    &:hover{
+        
+    }
+}
+.cs_hero.cs_style_1 {
+    height: 100vh;
+    min-height: 700px;
+    max-height: 900px;
+    padding: 190px 160px 50px;
+    .cs_swiper_parallax_bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+}

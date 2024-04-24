@@ -4,7 +4,9 @@
     padding: 0 90px;
 }
 
-.cs_site_header {}
+.cs_site_header {
+    z-index: 101;
+}
 .cs_sticky_header{
     position: fixed;
     width: 100%;

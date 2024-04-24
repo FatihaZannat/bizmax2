@@ -1,10 +1,17 @@
 
+@import './default/color_variables';
+
 @for $i from 10 through 60 {
     .cs_fs_#{$i}{
         font-size: $i + px;
     }
 }
 
+@for $i from 1 through 6 {
+    .cs_zindex_#{$i} {
+      z-index: $i;
+    }
+  }
 @for $i from 1 through 6 {
     .cs_transisation_#{$i}{
         transition: all ($i/10) ease;
@@ -238,3 +245,7 @@
     margin-top: 80px;
   }
 //   end margin
+.cs_bg_primary{
+    background-color: $primary_color;
+    
+}

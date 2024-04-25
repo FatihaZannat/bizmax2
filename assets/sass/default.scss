@@ -338,3 +338,11 @@
     width: 150px;
   }
   /* End Width */
+//   hover
+
+.bg_accent,
+.bg_accent_hover{
+    &:hover{
+        background-color: $accent_color !important;
+    }
+}

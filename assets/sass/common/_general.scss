@@ -32,3 +32,13 @@
     }
     
 }
+.cs_social_btns{
+    a{
+    border: 1px solid #454a53;
+     
+    &:hover{
+        border-color: $accent_color;
+        background-color: $accent_color;
+    }
+}
+}

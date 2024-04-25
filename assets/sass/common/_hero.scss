@@ -10,11 +10,7 @@
     flex-wrap: wrap;
     // border-radius: 5px;
 
-    cs_btn{
-    }
-    &:hover{
-        
-    }
+   
 }
 .cs_hero.cs_style_1 {
     height: 100vh;
@@ -30,4 +26,10 @@
         background-size: cover;
         background-position: center;
     }
+}
+
+.cs_social_btns{
+    position: absolute;
+    top: 50%;
+    left: 90px;
 }

@@ -26,6 +26,14 @@
         padding-bottom: $i + px;
     }
 }
+@for $i from 1 through 30 {
+    .cs_column_gap_#{$i} {
+        column-gap: $i + px;
+    }
+    .cs_row_gap_#{$i} {
+        row-gap: $i + px;
+    }
+}
 // start radius
 .cs_rounded_5 {
     border-radius: 5px;
@@ -249,3 +257,84 @@
     background-color: $primary_color;
     
 }
+.cs_height_10 {
+    height: 10px;
+  }
+  .cs_height_20 {
+    height: 20px;
+  }
+  .cs_height_30 {
+    height: 30px;
+  }
+  .cs_height_35 {
+    height: 35px;
+  }
+  .cs_height_40 {
+    height: 40px;
+  }
+  .cs_height_45 {
+    height: 45px;
+  }
+  .cs_height_70 {
+    height: 70px;
+  }
+  .cs_height_75 {
+    height: 75px;
+  }
+  .cs_height_80 {
+    height: 80px;
+  }
+  .cs_height_90 {
+    height: 90px;
+  }
+  .cs_height_100 {
+    height: 100px;
+  }
+  .cs_height_135 {
+    height: 135px;
+  }
+  .cs_height_150 {
+    height: 150px;
+  }
+  /* End Height */
+  /* Start Width */
+  .cs_width_10 {
+    width: 10px;
+  }
+  .cs_width_20 {
+    width: 20px;
+  }
+  .cs_width_30 {
+    width: 30px;
+  }
+  .cs_width_35 {
+    width: 35px;
+  }
+  .cs_width_40 {
+    width: 40px;
+  }
+  .cs_width_45 {
+    width: 45px;
+  }
+  .cs_width_70 {
+    width: 70px;
+  }
+  .cs_width_75 {
+    width: 75px;
+  }
+  .cs_width_80 {
+    width: 80px;
+  }
+  .cs_width_90 {
+    width: 90px;
+  }
+  .cs_width_100 {
+    width: 100px;
+  }
+  .cs_width_135 {
+    width: 135px;
+  }
+  .cs_width_150 {
+    width: 150px;
+  }
+  /* End Width */

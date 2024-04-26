@@ -42,3 +42,28 @@
     }
 }
 }
+
+.cs_moving_wrap{
+    height: 200px;
+    background-color: #17191d;
+
+    &:hover{
+        .cs_moving_text{
+            animation-play-state: paused;
+        }
+    }
+}
+.cs_moving_text{
+    animation: side-left 20s linear infinite;   
+    > *{
+        padding: 10px 20px;
+    }
+}
+@keyframes side-left{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}

@@ -1,0 +1,48 @@
+.cs_section_heading{
+    .cs_section_heading_in{
+        flex: 1;
+    }
+    .cs_section_heading_right{
+        width: 40%;
+    }
+}
+.cs_service.cs_style_1{
+    border-top: 3px solid $accent_color;
+    
+    &:hover{
+       border-color: black;
+        .cs_service_iconbox  .cs_service_icon{
+            background-color: $accent_color;
+        }
+        .cs_service_btn{
+            background-color: black;
+            transform: rotate(0deg);
+
+            &:hover{
+                transform: rotate(-45deg) scale(1.08);
+            }
+        }
+    }
+
+}
+
+.cs_service_iconbox  .cs_service_icon{
+    background-color: black;
+    width: 70px;
+    height: 70px;
+    flex: none;
+}
+.cs_service_thumb{
+    height: 240px;
+    margin-left: -10px;
+    width: calc(100% + 20px);
+    
+    .cs_service_btn{
+        height: 40px;
+        width: 40px;
+        background-color: $accent_color;
+        right: 19px;
+        top: -20px;
+        transform: rotate(45deg);
+    }
+}

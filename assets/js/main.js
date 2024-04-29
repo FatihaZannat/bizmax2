@@ -16,6 +16,9 @@ script initialization
 // $.exists = function (selector) {
 //     return $(selector).length > 0
 // }
+$.exists = function (selector) {
+    return $(selector).length > 0;
+  };
 
 $(window).on('load', function () {
     preloader()
@@ -25,6 +28,10 @@ $(function(){
 mainNav()
 stickyHeader()
 dynamicBackground()
+
+if ($.exists('.wow')) {
+    new WOW().init();
+  }
 })
 
 
@@ -58,10 +65,10 @@ function stickyHeader () {
     let $headerHeight = $header.outerHeight() + 30;
     
     $window.scroll(function () {
-        console.log('headerHeight '+ $headerHeight);
-        console.log('before' + lastScrollTop);
+        // console.log('headerHeight '+ $headerHeight);
+        // console.log('before' + lastScrollTop);
         let windowTop = $window.scrollTop();
-        console.log(' windoTop',windowTop);
+        // console.log(' windoTop',windowTop);
         // console.log("after" + lastScrollTop);
 
         if(windowTop >= $headerHeight){
@@ -72,9 +79,9 @@ function stickyHeader () {
         }
         
         if ($header.hasClass('cs_gescout_header')) {
-            console.log('lastScrollTop' + lastScrollTop);
+            // console.log('lastScrollTop' + lastScrollTop);
             if (windowTop < lastScrollTop) {
-                console.log('lastScrollTop' + lastScrollTop);
+                // console.log('lastScrollTop' + lastScrollTop);
               $header.addClass('cs_gescout_show');
             } else {
               $header.removeClass('cs_gescout_show');
@@ -93,7 +100,7 @@ function stickyHeader () {
 function dynamicBackground () {
     $('[data-src]').each(function(){
         let src = $(this).attr('data-src')
-        console.log(src);
+        // console.log(src);
         $(this).css({
             'background-image': `url('${src}')`
         })

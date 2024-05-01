@@ -28,6 +28,7 @@ $(function(){
 mainNav()
 stickyHeader()
 dynamicBackground()
+paralaxSwiperSLider()
 
 if ($.exists('.wow')) {
     new WOW().init();
@@ -56,7 +57,7 @@ function mainNav(){
     })
 }
 /*--------------------------------------------------
-2. sticky header
+3. sticky header
 ----------------------------------------------------*/
 function stickyHeader () {
     let $window = $(window)
@@ -95,7 +96,7 @@ function stickyHeader () {
 }
 
 /*--------------------------------------------------
-2. dynamic Background
+4. dynamic Background
 ----------------------------------------------------*/
 function dynamicBackground () {
     $('[data-src]').each(function(){
@@ -106,5 +107,63 @@ function dynamicBackground () {
         })
     })
 }
+
+/*--------------------------------------------------
+5. slick slider
+----------------------------------------------------*/
+
+function slickInit() {
+    $('.responsive').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+      });
+}
+/*--------------------------------------------------
+5. swiper slider
+----------------------------------------------------*/
+
+function paralaxSwiperSLider(){
+    var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        speed: 1000,
+        navigation: {
+          nextEl: ".cs_swiper_button_next",
+          prevEl: ".cs_swiper_button_prev",
+        },
+    })
+   
+}
+
 
 })(jQuery)

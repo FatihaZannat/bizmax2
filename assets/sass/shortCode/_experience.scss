@@ -1,0 +1,35 @@
+.cs_experience.cs_style_1{
+    .cs_experience_thumb{
+       padding: 40px 40px 115px 40px; 
+       position: relative;
+
+       &::before{
+        content: '';
+        width: 255px;
+        height: 304px;
+        background-color: #f2f3f5;
+        position: absolute;
+        border-radius: 15px;
+        top: 0;
+        left: 0;
+       }
+    }
+    
+}
+.cs_experience_shape{
+    position: absolute;
+    bottom: 0;
+    right: 220px;
+}
+
+.cs_experience_box{
+    border: 15px solid #fff;
+  width: 300px;
+  height: 360px;
+  margin-bottom: 75px ;
+
+
+  h2{
+    letter-spacing: .2em;
+  }
+}

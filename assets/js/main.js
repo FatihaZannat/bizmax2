@@ -31,6 +31,7 @@
     paralaxSwiperSLider()
     progressBar()
     counterInit()
+    slickInit()
 
     if ($.exists('.wow')) {
       new WOW().init();
@@ -115,41 +116,42 @@
   ----------------------------------------------------*/
 
   function slickInit() {
-    $('.responsive').slick({
-      dots: true,
-      infinite: false,
-      speed: 300,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ]
-    });
+    if ($.exists('.cs_project_slider')) {
+      $('.cs_project_slider').each(function () {
+        // console.log('hello');
+        let sliderActive = $(this).find('.cs_slider_activate')
+
+        sliderActive.slick({
+          centerMode: true,
+          centerPadding: '60px',
+          slidesToShow: 4,
+          infinite: true,
+          slidesToScroll: 1,
+          prevArrow: $(this).find('.cs_slider_prev'),
+          nextArrow: $(this).find('.cs_slider_next'),
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+              }
+            }
+          ]
+        });
+      })
+    }
   }
   /*--------------------------------------------------
   5. swiper slider
@@ -190,13 +192,13 @@
           let winHeight = $(window).height()
           let scrollPosition = Math.round(scrollPos + winHeight / 1.2)
 
-          console.log('scrollPosition', scrollPosition);
+          // console.log('scrollPosition', scrollPosition);
           return scrollPosition
         }
 
         $('.odometer').each(function () {
           let elementOffset = $(this).offset().top
-          console.log('offset', elementOffset);
+          // console.log('offset', elementOffset);
           // console.log('scrollpos', winScrollPosition());
           if (elementOffset < winScrollPosition()) {
             $(this).html($(this).attr('data-count-to'))
@@ -207,7 +209,7 @@
 
 
     }
-   
+
   }
 
 

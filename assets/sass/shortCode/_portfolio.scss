@@ -1,0 +1,39 @@
+.cs_portfolio{
+    height: 500px;
+
+    .cs_portfolio_overlay{
+        background: linear-gradient(
+            180deg,
+            rgba(254, 198, 63, 0) 31.74%,
+            #e9a132 87.15%
+        );
+        opacity: 0;
+        z-index: 1;
+    }
+    .cs_portfolio_title{
+        opacity: 0;
+        transform: translateX(30px);
+        a{
+         &:hover{
+            color: white;
+            text-decoration: underline;
+         }
+        }
+        text-wrap: nowrap;
+    }
+
+    &:hover{
+        .cs_portfolio_overlay{
+         
+            opacity: 1;
+        }
+        .cs_portfolio_title{
+            opacity: 1;
+            transform: translateX(0);
+            z-index: 2;
+        }
+        .cs_portfolio_thumb{
+            transform: scale(1.2);
+        }
+    }
+}

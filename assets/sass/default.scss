@@ -14,7 +14,7 @@
   }
 @for $i from 1 through 6 {
     .cs_transisation_#{$i}{
-        transition: all ($i/10) ease;
+        transition: all ($i / 10) + s ease;
     }
 }
  
@@ -339,7 +339,9 @@
   }
   /* End Width */
 //   hover
-
+.bg_gray{
+  background-color: $gray_color;
+}
 .bg_accent{
   background-color: $accent_color;
 }

@@ -1,0 +1,25 @@
+.cs_2iconbox_wraper {
+    .cs_iconbox_left_img {
+        width: 64.5%;
+    }
+
+    .cs_iconbox_icon {
+        width: 71px;
+        height: 71px;
+        box-shadow: 4px 4px rgba(102, 102, 102, 0.597);
+
+        &:hover {
+            background-color: rgba(102, 102, 102, 1);
+        }
+    }
+
+    .cs_iconbox_right_img {
+        width: 49%;
+        height: calc(100% - 50px);
+    }
+
+    .cs_iconbox_logo {
+        top: -50px;
+        right: 600px;
+    }
+}

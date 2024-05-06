@@ -122,8 +122,6 @@
         let sliderActive = $(this).find('.cs_slider_activate')
 
         sliderActive.slick({
-          centerMode: true,
-          centerPadding: '60px',
           slidesToShow: 4,
           infinite: true,
           slidesToScroll: 1,

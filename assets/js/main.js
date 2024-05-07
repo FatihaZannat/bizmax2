@@ -157,6 +157,7 @@
         activeSlider.slick({
           slidesToShow: 3,
           autoplay: true,
+          swipeToSlide: true,
           variableWidth: true,
           autoplaySpeed: 3000,
           infinite: true,

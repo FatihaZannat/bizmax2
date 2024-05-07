@@ -1,0 +1,14 @@
+.cs_testimonial_slider{
+    gap: 30px;
+    .cs_testimonial{
+        max-width: 310px;
+        
+    }
+    .cs_testimonial_img{
+        width: 75px;
+        img{
+            margin-top: -20px;
+            border: 2px solid $secondery_color;
+        }
+    }
+}

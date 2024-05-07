@@ -150,6 +150,41 @@
         });
       })
     }
+    if($.exists('.cs_testimonial_slider')){
+      $('.cs_testimonial_slider').each(function(){
+        let activeSlider = $(this).find('.cs_slider_activate')
+        activeSlider.slick({
+          slidesToShow: 3,
+          autoplay: true,
+          variableWidth: true,
+          autoplaySpeed: 3000,
+          infinite: true,
+          slidesToScroll: 1,
+          prevArrow: $(this).find('.cs_slider_button_prev'),
+          nextArrow: $(this).find('.cs_slider_button_next'),
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+              }
+            }
+          ]
+        });
+      })
+    }
   }
   /*--------------------------------------------------
   5. swiper slider

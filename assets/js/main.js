@@ -156,7 +156,7 @@
         let activeSlider = $(this).find('.cs_slider_activate')
         activeSlider.slick({
           slidesToShow: 3,
-          // autoplay: true,
+          autoplay: true,
           variableWidth: true,
           autoplaySpeed: 3000,
           infinite: true,

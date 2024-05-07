@@ -32,6 +32,7 @@
     progressBar()
     counterInit()
     slickInit()
+    review()
 
     if ($.exists('.wow')) {
       new WOW().init();
@@ -155,7 +156,7 @@
         let activeSlider = $(this).find('.cs_slider_activate')
         activeSlider.slick({
           slidesToShow: 3,
-          autoplay: true,
+          // autoplay: true,
           variableWidth: true,
           autoplaySpeed: 3000,
           infinite: true,
@@ -245,5 +246,19 @@
 
   }
 
+
+  
+  /*--------------------------------------------------
+  7.   review
+  ---------------------------------------------------*/
+
+  function review(){
+    $('.cs_rating').each(function(){
+      let review = $(this).attr('cs-rating')
+      let reviewVal = review * 20 + '%';
+      console.log(reviewVal);
+      $(this).find('.cs_rating_percentage').css('width', reviewVal) 
+    })
+  }
 
 })(jQuery)

@@ -193,10 +193,10 @@
         font-family: 'Font Awesome 6 Free';
         font-weight: 900;
         opacity: 0.3;
-       
+
     }
 
-    > * {
+    >* {
         position: absolute;
         top: 0;
         left: 0;
@@ -206,8 +206,9 @@
     }
 
     .cs_rating_percentage {
-       overflow: hidden;
+        overflow: hidden;
         letter-spacing: 5px;
+
         &::before {
             content: '\f005\f005\f005\f005\f005';
             font-family: 'Font Awesome 6 Free';
@@ -217,16 +218,20 @@
 
 }
 
-.form-control{
-    padding: 17px 20px;
-   
-    &:focus{
-        // color: $primary_color;
-        background-color: $gray_color;
-        // box-shadow: 0 0 0 rgba($primary_color, 0.5);
+
+.form-control {
+    background: #f6f6f6;
+    padding: 19px 20px;
+
+    &:focus {
+        color: $primary_color;
+        background-color: #f6f6f6;
+        box-shadow: 0 0 0 0.25rem rgba($accent_color, 0.25);
+
     }
 }
-.cs_contact_image{
+
+.cs_contact_image {
     bottom: -180px;
     right: -310px;
     // margin-right: 130px;

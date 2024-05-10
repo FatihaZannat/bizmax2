@@ -1,0 +1,51 @@
+.cs_top_footer {
+
+    border-bottom: 1px solid #353535;
+
+
+}
+
+.cs_newsletter_form {
+    .cs_newsletter_formInput {
+        background-color: #2e2d2d;
+        padding: 10px 150px 10px 20px;
+        border-radius: 5px;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .cs_footer_btn {
+        border-radius: 5px;
+        right: 4px;
+        top: 4px;
+    }
+}
+
+.cs_footer_ul {
+    margin-left: 0;
+    padding: 0;
+
+    li {
+        margin: 0;
+        // padding: 0;
+    }
+}
+
+.cs_widget_menu {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.cs_copyright_text {
+    background-color: #1b1b1b;
+    color: #8a8a8a;
+    a{
+        color: $accent_color;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
